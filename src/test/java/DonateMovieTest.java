@@ -33,7 +33,7 @@ public class DonateMovieTest {
     }
 
     @Test
-    public void checkMovieNameTest(){
+    public void checkMovieTitleTest(){
 
     }
 }

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Library {
-    private ArrayList<Movie> catalogue= new ArrayList<>();
+    protected final ArrayList<Movie> catalogue= new ArrayList<>();
 
     public void donate(Movie movie) {
         catalogue.add(movie);
