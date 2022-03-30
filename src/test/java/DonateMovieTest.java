@@ -1,29 +1,39 @@
 
-import  org.junit.Test;
-import java.sql.Connection;
-import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DonateMovieTest {
 
-    private final Library library;
-    private final Movie movie;
+    Library library;
+    Movie movie;
 
-    public DonateMovieTest() {
+
+    @BeforeEach
+    void setUp() {
         library = new Library();
         movie = new Movie();
     }
 
+
     @Test
+    @DisplayName("Movie added to catalogue Test")
     public void movieAddedToCatalogueTest(){
         library.donate(movie);
         assertTrue(library.contains(movie));
     }
 
+
     @Test
+    @DisplayName("Rental copy added")
     public void rentalCopyAddedTest(){
         library.donate(movie);
-        assertEquals(1,movie.getCopies());
+        assertEquals(5,movie.getCopies());
     }
 
+    @Test
+    public void checkMovieNameTest(){
+
+    }
 }
