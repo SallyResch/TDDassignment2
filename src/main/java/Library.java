@@ -7,6 +7,10 @@ public class Library {
     public void donate(Movie movie) {
         catalogue.add(movie);
         movie.addCopy();
+        movie.addCopy();
+        movie.addCopy();
+        movie.addCopy();
+        movie.addCopy();
     }
 
     boolean contains (Movie movie){
