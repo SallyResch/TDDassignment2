@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,13 +8,11 @@ public class DonateMovieTest {
     Library library;
     Movie movie;
 
-
     @BeforeEach
     void setUp() {
         library = new Library();
         movie = new Movie();
     }
-
 
     @Test
     @DisplayName("Movie added to catalogue Test")
@@ -24,16 +21,16 @@ public class DonateMovieTest {
         assertTrue(library.contains(movie));
     }
 
+    @Test
+    public void rentalCopyRemovedTest(){
+        library.donate(movie);
+        assertEquals(4,removeOneCopy());
+    }
 
     @Test
     @DisplayName("Rental copy added")
     public void rentalCopyAddedTest(){
         library.donate(movie);
         assertEquals(5,movie.getCopies());
-    }
-
-    @Test
-    public void checkMovieTitleTest(){
-
     }
 }
