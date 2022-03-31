@@ -22,15 +22,9 @@ public class DonateMovieTest {
     }
 
     @Test
-    public void rentalCopyRemovedTest(){
-        library.donate(movie);
-        assertEquals(4,removeOneCopy());
-    }
-
-    @Test
     @DisplayName("Rental copy added")
     public void rentalCopyAddedTest(){
         library.donate(movie);
-        assertEquals(5,movie.getCopies());
+        assertEquals(1,movie.getCopies());
     }
 }

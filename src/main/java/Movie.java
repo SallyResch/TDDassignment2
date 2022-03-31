@@ -5,11 +5,7 @@ public class Movie extends Library {
         return copies;
     }
 
-    public void addCopy(Movie movie) {
+    public void addCopy() {
       copies++;
-    }
-
-    public void removeOneCopy() {
-        copies--;
     }
 }
