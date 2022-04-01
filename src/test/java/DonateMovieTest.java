@@ -1,9 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DonateMovieTest {
@@ -24,11 +21,11 @@ public class DonateMovieTest {
         assertTrue(library.contains(movie));
     }
 
-    @Test
+    /*@Test
     public void movieNotAddedToCatalogueTest(){
         library.donate(movie);
         assertFalse(library.contains(movie));
-    }
+    }*/
 
     @Test
     @DisplayName("Rental copy added")
